@@ -31,9 +31,10 @@ module FigRake
     end
 
     def name_from_fig
-      YAML.load(File.read('fig.yaml')).to_a.select do |(_, opts)|
+      container_config = YAML.load(File.read('fig.yml')).to_a.select do |(_, opts)|
         opts.has_key?("build")
-      end.first.first
+      end
+      container_config.first.first
     rescue Errno::ENOENT
       nil
     end
