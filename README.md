@@ -36,6 +36,10 @@ Just add `require 'fig_rake/rake'` to your Rakefile or `require 'fig_rake/rails'
 
 If you need to run rake commands locally after installing FigRake, add `FIG_RAKE=off` to the end of your rake command or as a shell environment variable to disable FigRake for that command.
 
+## Versioning
+
+This Gem is feature complete for my purposes. However it lacks tests. As soon as I have added enough of a test suite to feel comfortable, I will cut a 1.0.0 release. 
+
 ## Contributing
 
 1. Fork it ( https://github.com/edpaget/fig_rake/fork )
