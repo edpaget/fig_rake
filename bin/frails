@@ -6,4 +6,4 @@ $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
 require 'fig_rake/cli'
 
-FigRake::Cli.new(:rake, ARGV).exec
+FigRake::Cli.new(:rails, ARGV).exec
