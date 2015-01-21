@@ -18,7 +18,7 @@ module FigRake
     
     def parse_arguments(command, args)
       OptionParser.new do |opts|
-        opts.banner = "Usage: f#{command} [options] [rake arguments]"
+        opts.banner = "Usage: f#{command} [options] [arguments]"
 
         opts.on('-c', '--container-name [NAME]', String,
                 "Name of Container to exec rake in") do |name|
