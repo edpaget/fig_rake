@@ -7,6 +7,7 @@ module FigRake
     end
 
     def exec
+      p "fig run --rm --entrypoint=#{command} #{container_name} #{rake_args.join(' ')}"
       exit system("fig run --rm --entrypoint=#{command} #{container_name} #{rake_args.join(' ')}")
     end
   end

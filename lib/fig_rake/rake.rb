@@ -1,27 +1,23 @@
 require 'rake/application'
-require 'fig_rake/configuration'
-require 'fig_rake/command'
+require 'fig_rake/mixin'
 
 module FigRake
   module Rake
+    include FigRake::Mixin
+    
     def self.default_container(name=nil)
       return @name unless name
       @name = name
     end
 
-    def default_container(name)
-      FigRake::Rake.default_container(name)
+    def default_name
+      FigRake::Rails.default_container
     end
-
-    def run_in_fig(args)
-      configuration = Configuration.new
-      Command.new(:rake, configuration.container_name, args).exec
+    
+    def command
+      :rake
     end
   end
-end
-
-module Kernel
-  include FigRake::Rake
 end
 
 module Rake
