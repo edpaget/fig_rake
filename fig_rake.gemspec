@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = FigRake::VERSION
   spec.authors       = ["Edward Paget"]
   spec.email         = ["edward@cassetteta.pe"]
-  spec.summary       = %q{Utilities to make using Rake with a fig dev environment easier}
-  spec.description   = %q{It kinda just does that see the README}
+  spec.summary       = %q{Utilities to make using Rake and Rails with a fig dev environment pleasant}
+  spec.description   = %q{Utilities to make using Rake and Rails with a fig dev environment pleasant}
   spec.homepage      = "https://github.com/edpaget/fig_rake"
   spec.license       = "MIT"
 
