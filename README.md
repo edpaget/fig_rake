@@ -32,9 +32,9 @@ For more information type `frake --help` or `frails --help`
 
 I don't think there's anything wrong with monkey patching, so let's do it.
 
-Just add `require 'fig_rake/rake'` to your Rakefile or `require 'fig_rake/rails'` and frake will automatically intercept your rake and rails commands and run them against its default container. The default container will be determined in the same manner as the `frake` command. You can optionally call `FigRake::Rake.default_container "name"` in your Rakefile or `FigRake::Rails.default_container "name"` in your config/application.rb to set the default container name there.
+Just add `require 'fig_rake/rake'` to your Rakefile or `require 'fig_rake/rails'` and frake will automatically intercept your rake and rails commands and run them against its default container. The default container will be determined in the same manner as the `frake` command. You can optionally call `FigRake::Rake.default_container "name"` in your Rakefile or `FigRake::Rails.default_container "name"` in your config/boot.rb to set the default container name there.
 
-If you need to run rake commands locally after installing FigRake, add `FIG_RAKE=off` to the end of your rake command or as a shell environment variable to disable FigRake for that command.
+You still need to explicity enable Fig Rake after including it in Rake or Rails by setting the environment variable `FIG_RAKE`.
 
 ## Versioning
 

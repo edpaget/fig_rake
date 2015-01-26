@@ -27,10 +27,10 @@ module Rake
     tl = self.instance_method(:top_level)
 
     define_method :top_level do
-      if ENV['FIG_RAKE'] == 'off'
-        tl.bind(self).call
-      else
+      if ENV['FIG_RAKE']
         run_in_fig(ARGV)
+      else
+        tl.bind(self).call
       end
     end
   end

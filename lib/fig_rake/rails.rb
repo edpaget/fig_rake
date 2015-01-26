@@ -28,10 +28,10 @@ module Rails
       m = self.instance_method(method)
 
       define_method method do
-        if ENV['FIG_RAKE'] == 'off'
-          m.bind(self).call
-        else
+        if ENV['FIG_RAKE']
           run_in_fig(argv.unshift(method))
+        else
+          m.bind(self).call
         end
       end
     end
