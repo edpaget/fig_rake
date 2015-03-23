@@ -7,7 +7,7 @@ module FigRake
     def initialize(command, arguments)
       @options = Configuration.new
       parse_arguments(command, arguments)
-      @command = Command.new(command, @options.container_name, @options.rake_args)
+      @command = Command.new(command, @options.container_name, @options.rake_args, @options.docker_command)
     end
 
     def exec
