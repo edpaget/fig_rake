@@ -8,7 +8,7 @@ module FigRake
 
     def exec
       p "#{docker_command} run --rm --entrypoint=#{command} #{container_name} #{rake_args.join(' ')}"
-      exit system("#{docker_command} run --rm --entrypoint=#{command} #{container_name} #{rake_args.join(' ')}")
+      exit system("#{docker_command} run --rm --entrypoint=bundle #{container_name} exec #{command} #{rake_args.join(' ')}")
     end
   end
 end
